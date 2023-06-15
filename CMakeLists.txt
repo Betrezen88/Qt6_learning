@@ -10,6 +10,7 @@ qt_standard_project_setup()
 
 qt_add_executable(appQt6_learning
     main.cpp
+    EnumTypes.h
 )
 
 qt_add_qml_module(appQt6_learning
