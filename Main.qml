@@ -6,4 +6,10 @@ Window {
     height: 480
     visible: true
     title: qsTr("Hello World")
+
+    ModuleElement {
+        obj: myModule.obj
+
+        width: 150; height: 50
+    }
 }

@@ -1,12 +1,19 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 
+#include "CustomModules/MyModule/ModuleMain.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
+    ModuleMain module;
+
     QQmlApplicationEngine engine;
+
+    engine.rootContext()->setContextProperty("myModule", &module);
+
     const QUrl url(u"qrc:/Qt6_learning/Main.qml"_qs);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed,
         &app, []() { QCoreApplication::exit(-1); },
