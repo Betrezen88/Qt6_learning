@@ -2,7 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
-#include "CustomModules/MyModule/ModuleMain.h"
+#include "../CustomModules/MyModule/ModuleMain.h"
 
 int main(int argc, char *argv[])
 {
